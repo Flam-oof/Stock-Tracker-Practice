@@ -4,7 +4,7 @@ import pandas as pd
 
 st.title("我的台股與 ETF 追蹤")
 
-symbols = ["00878.TW", "00919.TW", "00935.TW", "00981A.TW", "00993A.TW", "2330.TW"] #追蹤的股票或 ETF 代碼
+symbols = ["00935.TW", "00981A.TW", "00993A.TW", "2330.TW"] #追蹤的股票或 ETF 代碼
 
 rows = []
 for s in symbols:
