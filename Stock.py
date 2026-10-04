@@ -17,6 +17,7 @@ for s in symbols:
 table = pd.DataFrame(rows)
 st.dataframe(table)
 
-st.subheader("近 5 日收盤價走勢")
+st.subheader("近 5 日漲跌幅走勢 (%)")
 prices = pd.DataFrame({s: yf.Ticker(s).history(period="5d")["Close"] for s in symbols})
-st.line_chart(prices)
+percent = (prices / prices.bfill().iloc[0] - 1) * 100
+st.line_chart(percent)
